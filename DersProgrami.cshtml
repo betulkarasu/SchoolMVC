@@ -1,0 +1,35 @@
+@model List<SchoolModel>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Akademisyen Adı/tr</th>
+      <th scope="col">Ders Adı/tr</th>
+      <th scope="col">Ders Kodu</th>
+      <th scope="col">Ders ODEVİ/tr</th>
+      <th scope="col">Ders Günü/tr</th>
+      <th scope="col">Ödev Teslim/tr</th>
+      <th scope="col">Ders Sınıfı/tr></th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+  @foreach (SchoolModel school in Model)
+{
+   <tr>
+      <th scope="row">@school.InstructorName</th>
+      <td>@school.SectionName</td>
+      <td>@school.SectionCode</td>
+      <td>@school.Assignments</td>
+      <td>@school.ProgramDays</td>
+      <td>@school.LastDeadline</td>
+      <td>@school.Class</td>
+    </tr>
+
+}
+
+  </tbody>
+</table>
